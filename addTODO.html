@@ -14,13 +14,13 @@
     <h1>TODO-Tracker</h1>
     
     <!--Menu to navigate to subpages-->
-    <nav>
-        <ul class="nav nav-pills justify-content-end flex-column flex-sm-row">
+	<nav>
+        <ul class="nav justify-content-end flex-column flex-sm-row">
       <li class="nav-item">
         <a class="nav-link flex-sm-fill " href="index.html">My TODOs</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link flex-sm-fill " href="addTODO.html">Add new TODO</a>
+        <a class="nav-link flex-sm-fill disabled" href="addTODO.html">Add new TODO</a>
       </li>
       <li class="nav-item">
         <a class="nav-link flex-sm-fill " href="editTODO.html">How to edit TODO</a>
@@ -28,29 +28,94 @@
       <li class="nav-item">
         <a class="nav-link flex-sm-fill " href="impressum.html">Impressum</a>
       </li>
-    </ul>
-    </nav>
-    
-    <main>
-        <h2>Add TODOs</h2>
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">TODO</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-dark">Submit</button>
-        </form>
-    </main>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		</ul>
+	</nav>
+	
+	<main>
+		<h2>Add TODO</h2>
+		<div class = "table-responsive">
+		<table class="table">
+		  <thead>
+			<tr>
+			  <th>TODO</th>
+			  <th>Deadline</th>
+			  <th>Done (%)</th>
+			  <th></th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td>
+			  <div class="input-group mb-3">
+				<input type="text" class="form-control" placeholder="Titel" aria-label="Titel" aria-describedby="basic-addon2">
+				</input>
+				</div>
+				</td>
+			  <td>
+				<div class="input-group ">
+				  <select class="custom-select" id="inputGroupSelect01">
+					<option selected>Tag</option>
+					<option value="1">01</option>
+					<option value="2">02</option>
+					<option value="3">03</option>
+					<option value="4">04</option>
+					<option value="5">05</option>
+					<option value="6">06</option>
+					<option value="7">07</option>
+					<option value="8">08</option>
+					<option value="9">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+				  </select>
+				  <select class="custom-select" id="inputGroupSelect01">
+					<option selected>Monat</option>
+					<option value="1">Januar</option>
+					<option value="2">Februar</option>
+					<option value="3">März</option>
+					<option value="4">April</option>
+					<option value="5">Mai</option>
+					<option value="6">Juni</option>
+					<option value="7">Juli</option>
+					<option value="8">August</option>
+					<option value="9">September</option>
+					<option value="10">Oktober</option>
+					<option value="11">November</option>
+					<option value="12">Dezember</option>
+				  </select>
+				  <input type="text" class="form-control" placeholder="Jahr" aria-label="Jahr" aria-describedby="basic-addon1">
+				</div>
+				</div>
+				</td>
+			  <td>
+			  <input type="text" class="form-control" placeholder="bereits zu ...% bearbeitet" aria-label="Done in %" aria-describedby="basic-addon2">
+			  </input>
+			  </td>
+			  <td>
+				<button type="button" class="btn btn-outline-dark">Editing Done</button></td>
+			  </tr>
+		</table>
+		</div>
+	</main>
+	
   </body>
 </html>
