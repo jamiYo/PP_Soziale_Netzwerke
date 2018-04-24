@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,7 +8,6 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-     
     <title>TODO-Tracker</title>
   </head>
   <body>
@@ -36,7 +34,7 @@
 	<main>
 		<h2>Add TODO</h2>
 			<form class="form">
-    			<div class="table-responsive">
+    			<div class="table-responsive l-y-5">
         			<table class="table">
 			            <thead>
 			                <tr>
@@ -48,9 +46,9 @@
 			            </thead>
 			            <tbody>
 			                <tr>
-			                    <td><input type="text" class="form-control" value="Your TODO"/></td>
+			                    <td><input type="text" class="form-control" placeholder="Your TODO" required></td>
 			                    <td><input type="date" class="form-control"/></td>
-			                    <td><input type="text" class="form-control" placeholder="Done in %" aria-label="Done in %" aria-describedby="basic-addon2"></input></td>
+			                    <td><input type="range" name="Done in %" value="0" min="0" max="100"  class="form-control" required></input></td>
 			                  	<td><button type="button" class="btn btn-outline-dark">Add</button></td>
 			                </tr>
 			            </tbody>
