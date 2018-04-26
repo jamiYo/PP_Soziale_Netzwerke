@@ -14,3 +14,11 @@ p {
 	margin-left: 10px;
 	margin-bottom: 2px;
 }
+
+.range{
+	min-width: 75px;
+}
+
+.calender{
+	max-width: 200px;
+}
