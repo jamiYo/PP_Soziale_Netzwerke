@@ -22,3 +22,7 @@ p {
 .calender{
 	max-width: 200px;
 }
+
+textarea {
+    min-width: 200px;
+}
