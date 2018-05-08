@@ -1,0 +1,55 @@
+class MyToDosView(ListView):
+    model = ToDo
+    template_name = "toDoTracker/index.html"
+    context_object_name = 'todo_queryset'
+
+    def get_queryset(self):
+        todo_queryset = ToDo.objects.all().order_by('due_date')
+        return todo_queryset
+
+
+
+
+
+    # def post(self, request):
+#  ToDo.objects.create(toDo_text=request.POST['todo_text'], due_date=request.POST['date'], progress=request.POST['progress'])
+#  return redirect(reverse('toDoTracker:myToDos'))
+
+
+
+
+    # def post(self, request):
+    #  ToDo.objects.create(toDo_text=request.POST['todo_text'], due_date=request.POST['date'], progress=request.POST['progress'])
+    #  return redirect(reverse('toDoTracker:myToDos'))
+
+
+class AddView(CreateView):
+    template_name = "toDoTracker/addTODO.html"
+    model = ToDo
+
+    def get(self, request):
+            return render(request, 'toDoTracker/addTODO.html')
+
+    def post(self, request):
+            ToDo.objects.create(toDo_text=request.POST['todo_text'], due_date=request.POST['date'], progress=request.POST['progress'])
+            return redirect(reverse('toDoTracker:myToDos'))
+
+
+def impressum(request):
+    return render(request, 'toDoTracker/impressum.html')
+
+
+#####
+# def index(request):
+#    if request.method == 'POST':
+#
+#        else:
+#            todo_id = request.POST.get('name');
+#            ToDo.objects.filter(id=int(todo_id)).delete()
+#
+
+
+    elif request.method == "POST":
+        ToDo.objects.filter(id=todo_id).update(toDo_text=request.POST['todo_text'], due_date=request.POST['date'],\
+                                               progress=request.POST['progress'])
+        return redirect(reverse('toDoTracker:myToDos'))

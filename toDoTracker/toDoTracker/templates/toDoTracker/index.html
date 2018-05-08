@@ -1,0 +1,35 @@
+{% extends 'toDoTracker/base.html' %}
+
+{% block content %}
+  <main>
+        <h2>My TODOs</h2>
+        <div class = "table-responsive">
+          <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>TODO</th>
+                  <th>Deadline</th>
+                  <th>Done (%)</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                   {% for item in todo_queryset %}
+                      <tr>
+                          <td>{{ item.toDo_text }}</td>
+                          <td>{{ item.due_date | date:"F d Y" }}</td>
+                          <td>{{ item.progress }}%</td>
+                          <td>
+                            <a href="{% url 'toDoTracker:edit' item.id %}" class='btn btn-outline-dark'>Edit</a>
+                          </td>
+                          <td>
+                            <a href="{% url 'toDoTracker:delete' item.id %}" class='btn btn-outline-dark'>Delete</a>
+                          </td>
+                      </tr>
+                   {% endfor %}
+              </tbody>
+          </table>
+        </div>
+    </main>
+{% endblock %}

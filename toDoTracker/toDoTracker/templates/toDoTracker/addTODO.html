@@ -1,0 +1,28 @@
+{% extends 'toDoTracker/base.html' %}
+
+{% block content %}
+    <main>
+        <h2>Add TODO</h2>
+        <form class="form" action="{% url 'toDoTracker:add' %}" method="post">{% csrf_token %}
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>TODO</th>
+                            <th>Deadline</th>
+                            <th>Done(%)</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><textarea class = "form-control" name="todo_text" rows = "1" maxlength="160" placeholder="Your TODO" required></textarea></td>
+                            <td><input type="date" class="calender form-control" name="date" required></input></td>
+                            <td><input type="range" name="progress" value="0" min="0" max="100" class="range form-control"></input></td>
+                            <td><button type="submit" class="btn btn-outline-dark" name = "add">Add</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </main>
+{% endblock %}
