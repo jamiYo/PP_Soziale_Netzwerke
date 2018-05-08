@@ -24,3 +24,17 @@ Die Seite soll mit dem Bootstrap Framework erstellt werden. Dazu gehört, dass s
 
 Der Quelltext soll gut formatiert und übersichtlich geschrieben sein und bildet die Basis für die Rücksprache.
 
+
+[Aufgabe] Web Frameworks
+Aufgabe
+Eine Gruppe (2 Personen) erstellt mit einem der vorgegebenen Web-Frameworks eine dynamische Webseite mit der Funktionalität eines TODO Trackers. Andere Technologien sollen mit uns abgesprochen werden.
+
+Es soll die statische Webseite aus Aufgabe 1 als Template benutzt werden, d.h. die Webseite soll insbesondere auch auf mobilen Geräten (Tablet, Smartphone etc.) bedienbar sein.
+
+Zur geforderten Funktionalität gehört (mindestens) :
+
+Das Auflisten von bestehenden TODOs
+Das Erstellen von neuen TODOs
+Das Editieren von bestehenen TODOs
+Das Löschen von bestehenden TODOs
+
