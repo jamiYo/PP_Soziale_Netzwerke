@@ -1,6 +1,6 @@
 # PP_Soziale_Netzwerke
 
-[Aufgabe] Bootstrap
+[Aufgabe 1] Bootstrap
 Aufgabe
 Eine Gruppe (max 2 Personen) erstellt mit dem Bootstrap Framework eine statische Webseite, die einen einfachen TODO-Tracker simuliert.
 
@@ -25,7 +25,7 @@ Die Seite soll mit dem Bootstrap Framework erstellt werden. Dazu gehört, dass s
 Der Quelltext soll gut formatiert und übersichtlich geschrieben sein und bildet die Basis für die Rücksprache.
 
 
-[Aufgabe] Web Frameworks
+[Aufgabe 2] Web Frameworks
 Aufgabe
 Eine Gruppe (2 Personen) erstellt mit einem der vorgegebenen Web-Frameworks eine dynamische Webseite mit der Funktionalität eines TODO Trackers. Andere Technologien sollen mit uns abgesprochen werden.
 
