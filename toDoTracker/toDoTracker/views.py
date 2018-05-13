@@ -11,8 +11,8 @@ def mytodos(request):
 
 
 def delete(request, todo_id):
-    if request.method == "GET":
-        ToDo.objects.filter(id=todo_id).delete()
+    item = get_object_or_404(ToDo, pk=todo_id)
+    item.delete()
     return redirect(reverse('toDoTracker:myToDos'))
 
 
